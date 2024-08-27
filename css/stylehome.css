@@ -1,0 +1,53 @@
+#box1{
+    background-image: url(../img/home/brand/brandInstall.jpg);
+}
+
+#box2{
+    background-image: url(../img/home/brand/brandconfig.jpg);
+}
+
+#box3{
+    background-image: url(../img/home/brand/brandyoutube.jpg);
+}
+
+#box4{
+    background-image: url(../img/home/datapacks/powerarmor.jpg);
+}
+
+#box5{
+    background-image: url(../img/home/datapacks/deamon_forest.jpg);
+}
+
+#box6{
+    background-image: url(../img/home/datapacks/set_home.jpg);
+}
+
+ol{
+    background-color: rgba(128, 128, 128, 0.658);
+    margin: 0%;
+    width: 90%;
+    height: 80%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 5%;
+    overflow: scroll;  
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+
+li{ 
+    font-weight: bolder;
+    margin-top: 2%;
+    font-size: 120%;
+    color: white;
+}
+
+a:hover{
+    color: green;
+}
+
+a{
+    font-size: 1vw;
+    text-decoration: none;
+    color: rgb(112, 187, 112);
+}
