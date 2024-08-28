@@ -25,11 +25,11 @@
 ol{
     background-color: rgba(128, 128, 128, 0.658);
     margin: 0%;
-    width: 90%;
+    width: 80%;
     height: 80%;
     margin-left: 3%;
     margin-right: 3%;
-    padding-left: 5%;
+    padding-left: 10%;
     overflow: scroll;  
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
