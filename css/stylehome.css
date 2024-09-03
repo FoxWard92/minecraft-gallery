@@ -25,19 +25,19 @@
 ol{
     background-color: rgba(128, 128, 128, 0.658);
     margin: 0%;
-    width: 85%;
+    width: 81%;
     height: 80%;
     margin-left: 2.5%;
     margin-right: 2.5%;
-    padding-left: 7%;
-    padding-right: 3%;
+    padding-left: 10%;
+    padding-right: 5%;
     overflow: scroll;  
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
 }
 
 li{ 
-    text-align: justify;
+    text-align: left;
     font-weight: bolder;
     margin-top: 2%;
     font-size: 120%;
@@ -52,4 +52,19 @@ a{
     font-size: 1vw;
     text-decoration: none;
     color: rgb(112, 187, 112);
+}
+
+p{
+    background-color: rgba(128, 128, 128, 0.658);
+    margin: 0%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 2%;
+    height: 30%;
+    text-align: center;
+    color: white;
+    overflow: scroll;
+    font-size: 120%;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
 }

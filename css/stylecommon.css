@@ -2,21 +2,6 @@ body{
     margin: 0%;
 }
  
-p{
-    background-color: rgba(128, 128, 128, 0.658);
-    margin: 0%;
-    margin-left: 3%;
-    margin-right: 3%;
-    padding: 2%;
-    height: 30%;
-    text-align: justify;
-    color: white;
-    overflow: scroll;
-    font-size: 120%;
-    border-bottom-left-radius: 1vw;
-    border-bottom-right-radius: 1vw;
-}
- 
 h1{
     font-size: 2vw;
     color: white;

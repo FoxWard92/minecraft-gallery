@@ -20,3 +20,37 @@
     background-image: url(../img/datapacks/brand/defence_npc.jpeg);
 }
 
+ol{
+    display: none;
+    text-align: left;
+    color: white;
+    
+    overflow: scroll;
+    margin-left: 3%;
+    margin-right: 3%;
+    height: 30%;
+    width: 80%;
+    padding-top: 3%;
+    border-radius: 1vw;
+    background-color: rgba(128, 128, 128, 0.658);
+}
+
+li{
+    font-size: 120%;
+    font-weight: bolder;
+}
+
+.box-descrizione:hover>ol{
+    display: block;
+    animation: display 0.5s;
+}
+
+
+.box-descrizione:hover>h2{
+    display: none;
+}
+
+@keyframes display {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
