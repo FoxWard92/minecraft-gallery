@@ -18,6 +18,18 @@ body {
         border-bottom: solid rgb(112, 187, 112) 0.3vw;
     }
 
+    ol {
+
+        border-bottom-left-radius: 1vw;
+        border-bottom-right-radius: 1vw;
+    }
+
+
+    p {
+        border-bottom-left-radius: 1vw;
+        border-bottom-right-radius: 1vw;
+    }
+
     .button:hover {
         background-color: darkgreen;
     }
@@ -53,7 +65,8 @@ body {
     }
 }
 
-@media all and (max-width:1022px){
+@media all and (max-width:1022px) {
+
 
     h1 {
         margin: 0%;
@@ -64,10 +77,22 @@ body {
     h2 {
         margin: 0%;
         margin-bottom: 2%;
-        font-size: 5vw;
+        font-size: 4vw;
         text-transform: uppercase;
         color: white;
         border-bottom: solid rgb(112, 187, 112) 1vw;
+    }
+
+    ol{
+        
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+    }
+
+    p {
+
+        border-bottom-left-radius: 3vw;
+        border-bottom-right-radius: 3vw;
     }
 
     .body-page {
@@ -79,14 +104,14 @@ body {
         row-gap: 10%;
         grid-template-columns: 1fr 5fr 1fr;
         grid-template-rows: 10% 50% 50% 50% 50% 50% 50%;
-        
+
         grid-template-areas: ". title ." ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 .";
     }
 
     .button:hover {
         background-color: darkgreen;
     }
-    
+
     .button {
         padding: 5%;
         width: 50%;

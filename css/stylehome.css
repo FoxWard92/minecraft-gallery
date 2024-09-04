@@ -31,9 +31,7 @@ ol{
     margin-right: 2.5%;
     padding-left: 10%;
     padding-right: 5%;
-    overflow: scroll;  
-    border-bottom-left-radius: 1vw;
-    border-bottom-right-radius: 1vw;
+    overflow: scroll;
 }
 
 li{ 
@@ -65,6 +63,4 @@ p{
     color: white;
     overflow: scroll;
     font-size: 120%;
-    border-bottom-left-radius: 1vw;
-    border-bottom-right-radius: 1vw;
 }
