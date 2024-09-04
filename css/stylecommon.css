@@ -1,108 +1,174 @@
-body{
+body {
     margin: 0%;
 }
- 
-h1{
-    font-size: 2vw;
-    color: white;
-    border-bottom: solid 0.5vw white;
+
+@media all and (min-width:1023px) {
+    h1 {
+        font-size: 2vw;
+        color: white;
+        border-bottom: solid 0.5vw white;
+    }
+
+    h2 {
+        margin: 0%;
+        margin-bottom: 2%;
+        font-size: 1.5vw;
+        text-transform: uppercase;
+        color: white;
+        border-bottom: solid rgb(112, 187, 112) 0.3vw;
+    }
+
+    .button:hover {
+        background-color: darkgreen;
+    }
+
+    .button {
+        padding: 5%;
+        width: 50%;
+        color: white;
+        text-align: center;
+        font-size: 1vw;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: gray;
+    }
+
+    .body-page {
+        animation: load 1s;
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-columns: 7.5% 25% 2.5% 2.5% 25% 2.5% 2.5% 25% 7.5%;
+        grid-template-rows: 5% 10% 5% 35% 2.5% 35% 2.5%;
+        grid-template-areas: ". . . . . . . . ." ". . . title title title . . ." ". . . . . . . . ." ". box1 . . box2 . . box3 ." ". . . . . . . . ." ". box4 . . box5 . . box6 ." ". . . . . . . . .";
+    }
+
+    #box1,
+    #box2,
+    #box3,
+    #box4,
+    #box5,
+    #box6 {
+        border-radius: 1vw;
+    }
 }
 
-h2{
-    margin: 0%;
-    margin-bottom: 2%;
-    font-size: 1.5vw;
-    text-transform: uppercase;
-    color: white;
-    border-bottom: solid rgb(112, 187, 112) 0.3vw;
+@media all and (max-width:1022px){
+
+    h1 {
+        margin: 0%;
+        font-size: 5vw;
+        color: white;
+    }
+
+    h2 {
+        margin: 0%;
+        margin-bottom: 2%;
+        font-size: 5vw;
+        text-transform: uppercase;
+        color: white;
+        border-bottom: solid rgb(112, 187, 112) 1vw;
+    }
+
+    .body-page {
+        margin-top: 10%;
+        animation: load 1s;
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        row-gap: 10%;
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-rows: 10% 50% 50% 50% 50% 50% 50%;
+        
+        grid-template-areas: ". title ." ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 .";
+    }
+
+    .button:hover {
+        background-color: darkgreen;
+    }
+    
+    .button {
+        padding: 5%;
+        width: 50%;
+        color: white;
+        text-align: center;
+        font-size: 3vw;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: gray;
+    }
+
+    #box1,
+    #box2,
+    #box3,
+    #box4,
+    #box5,
+    #box6 {
+        border-radius: 3vw;
+    }
 }
 
-.button:hover{
-    background-color: darkgreen;
-}
-
-.button{
-    padding: 5%;
-    width: 50%;
-    color: white;
-    text-align: center;
-    font-size: 1vw;
-    text-transform: uppercase;
-    text-decoration: none;
-    background-color:gray;
-} 
-
-.title{
+.title {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 1vw;
     grid-area: title;
     background-color: gray;
-    border-bottom: 1vw solid rgb(112, 187, 112);
+    border-bottom: 0.7vw solid rgb(112, 187, 112);
 }
 
-.img{
-    background-position:center;
+.img {
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.body-page{
-    background-color: rgba(255, 255, 255, 0.431);
-    animation: load 1s;
-    display: grid;
-    width: 100%;
-    height: 100vh;
-    grid-template-columns: 7.5% 25% 2.5% 2.5% 25% 2.5% 2.5% 25% 7.5%;
-    grid-template-rows: 5% 10% 5% 35% 2.5% 35% 2.5%;
-    grid-template-areas: ". . . . . . . . ." ". . . title title title . . ." ". . . . . . . . ." ". box1 . . box2 . . box3 ." ". . . . . . . . ." ". box4 . . box5 . . box6 ." ". . . . . . . . .";
-}
-
-.box-descrizione{
+.box-descrizione {
     margin-bottom: 3%;
     display: flex;
     height: 97%;
     width: 100%;
     flex-direction: column;
     justify-content: end;
-    align-items:center;
-}
-
-#box1,#box2,#box3,#box4,#box5,#box6{
-    border-radius: 1vw;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content:end;    
 }
 
-#box1{
+#box1 {
     grid-area: box1;
 }
 
-#box2{
+#box2 {
     grid-area: box2;
 }
 
-#box3{
+#box3 {
     grid-area: box3;
 }
 
-#box4{
+#box4 {
     grid-area: box4;
 }
 
-#box5{
+#box5 {
     grid-area: box5;
 }
 
-#box6{
+#box6 {
     grid-area: box6;
 }
 
 
 @keyframes load {
-    0% {opacity: 0;};
-    100% {opacity: 1;};
+    0% {
+        opacity: 0;
+    }
+
+    ;
+
+    100% {
+        opacity: 1;
+    }
+
+    ;
 }
