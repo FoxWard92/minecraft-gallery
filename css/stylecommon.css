@@ -34,15 +34,8 @@ body {
         background-color: darkgreen;
     }
 
-    .button {
-        padding: 5%;
-        width: 50%;
-        color: white;
-        text-align: center;
+    .button{
         font-size: 1vw;
-        text-transform: uppercase;
-        text-decoration: none;
-        background-color: gray;
     }
 
     .body-page {
@@ -83,16 +76,20 @@ body {
         border-bottom: solid rgb(112, 187, 112) 1vw;
     }
 
-    ol{
-        
-    border-bottom-left-radius: 3vw;
-    border-bottom-right-radius: 3vw;
+    ol {
+
+        border-bottom-left-radius: 3vw;
+        border-bottom-right-radius: 3vw;
     }
 
     p {
 
         border-bottom-left-radius: 3vw;
         border-bottom-right-radius: 3vw;
+    }
+
+    .button{
+        font-size: 3vw;
     }
 
     .body-page {
@@ -103,24 +100,13 @@ body {
         height: 100vh;
         row-gap: 10%;
         grid-template-columns: 1fr 5fr 1fr;
-        grid-template-rows: 10% 50% 50% 50% 50% 50% 50%;
+        grid-template-rows: 10% 50% 50% 50% 50% 50% 50% 10% 10%;
 
-        grid-template-areas: ". title ." ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 .";
+        grid-template-areas: ". title ." ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 ." ". . .";
     }
 
-    .button:hover {
+    .button:active {
         background-color: darkgreen;
-    }
-
-    .button {
-        padding: 5%;
-        width: 50%;
-        color: white;
-        text-align: center;
-        font-size: 3vw;
-        text-transform: uppercase;
-        text-decoration: none;
-        background-color: gray;
     }
 
     #box1,
@@ -141,6 +127,13 @@ body {
     grid-area: title;
     background-color: gray;
     border-bottom: 0.7vw solid rgb(112, 187, 112);
+}
+
+.button {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .img {
@@ -193,6 +186,21 @@ body {
 
     100% {
         opacity: 1;
+    }
+
+    ;
+}
+
+@keyframes zoom {
+    0% {
+        background-size: 100%;
+    }
+
+    ;
+
+    100% {
+        background-size: 110%;
+        ;
     }
 
     ;

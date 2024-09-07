@@ -37,6 +37,10 @@ body {
         grid-template-areas: "title article" ". article" "header article";
 
     }
+
+    .button{
+        padding: 5%;
+    }
 }
 
 @media all and (max-width:1022px){
@@ -62,6 +66,7 @@ body {
     .nav-content{
         height: 100%;
     }
+    
 
     .main-title {
         background-color: rgba(244, 255, 235, 0.464);
@@ -73,13 +78,22 @@ body {
         display: grid;
         width: 100%;
         height: 100vh;
-        grid-template-columns: 45% 55%;
-        grid-template-rows: 10% 90%;
-        grid-template-areas: "title header" "article article";
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 5% 85%;
+        grid-template-areas: "title" "header" "article";
 
     }
 }
 
+
+.button:nth-child(even) {
+    border-left: 0.5vw solid rgb(112, 187, 112);
+    border-right: 0.5vw solid rgb(112, 187, 112);
+}
+
+.button{
+    width: 100%;
+}
 
 .nav-bar {
     grid-area: header;

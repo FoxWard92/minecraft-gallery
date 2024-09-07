@@ -40,12 +40,23 @@ body {
     .box-descrizione:hover>h2 {
         display: none;
     }
+    
+
+    .img:hover{
+        animation: zoom 0.5s;
+        animation-fill-mode:forwards;
+    }
 
 }
 
 @media all and (max-width:1022px) {
     ol {
         display: block;
+    }
+
+    .img:active{
+        animation: zoom 0.5s;
+        animation-fill-mode:forwards;
     }
 
 }
@@ -77,4 +88,10 @@ li {
     to {
         opacity: 1;
     }
+}
+
+.button {
+    padding: 5%;
+    width: 50%;
+    background-color: gray;
 }
