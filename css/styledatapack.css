@@ -90,8 +90,7 @@ li {
     }
 }
 
-.button {
-    padding: 5%;
+a{
     width: 50%;
     background-color: gray;
 }

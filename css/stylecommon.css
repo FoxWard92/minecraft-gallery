@@ -30,11 +30,11 @@ body {
         border-bottom-right-radius: 1vw;
     }
 
-    .button:hover {
+    a:hover {
         background-color: darkgreen;
     }
 
-    .button{
+    a{
         font-size: 1vw;
     }
 
@@ -88,7 +88,7 @@ body {
         border-bottom-right-radius: 3vw;
     }
 
-    .button{
+    a{
         font-size: 3vw;
     }
 
@@ -105,7 +105,7 @@ body {
         grid-template-areas: ". title ." ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 ." ". . .";
     }
 
-    .button:active {
+    a:active {
         background-color: darkgreen;
     }
 
@@ -129,11 +129,13 @@ body {
     border-bottom: 0.7vw solid rgb(112, 187, 112);
 }
 
-.button {
+a{
     color: white;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
+    padding: 5%;
+    width: 100%;
 }
 
 .img {

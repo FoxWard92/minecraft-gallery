@@ -42,16 +42,6 @@ li{
     color: white;
 }
 
-a:hover{
-    color: green;
-}
-
-a{
-    font-size: 1vw;
-    text-decoration: none;
-    color: rgb(112, 187, 112);
-}
-
 p{
     background-color: rgba(128, 128, 128, 0.658);
     margin: 0%;

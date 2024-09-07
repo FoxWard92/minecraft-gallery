@@ -37,10 +37,6 @@ body {
         grid-template-areas: "title article" ". article" "header article";
 
     }
-
-    .button{
-        padding: 5%;
-    }
 }
 
 @media all and (max-width:1022px){
@@ -54,6 +50,10 @@ body {
         height: 100%;
         width: calc(100% - 0.5vw);
         grid-area: article;
+    }
+    
+    a{
+        padding: 0%;
     }
 
     .title {
@@ -86,13 +86,9 @@ body {
 }
 
 
-.button:nth-child(even) {
+a:nth-child(even) {
     border-left: 0.5vw solid rgb(112, 187, 112);
     border-right: 0.5vw solid rgb(112, 187, 112);
-}
-
-.button{
-    width: 100%;
 }
 
 .nav-bar {
