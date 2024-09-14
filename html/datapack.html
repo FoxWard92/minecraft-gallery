@@ -6,12 +6,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/stylecommon.css" type="text/css">
     <link rel="stylesheet" href="../css/styledatapack.css" type="text/css">
+    <script type="text/javascript" src="../js/data.js"></script>
 </head>
-<body>
-    <div class="body-page"> 
+<body onload="wiewwet(0)">
+    <div class="body-page">
+
+        <div id="lbutton" class="container-button"><button onclick="wiewwet(-1)">&lt;</button></div> 
+        <div id="rbutton" class="container-button"><button onclick="wiewwet(1)">></button> </div>
+
         <div class="title"> 
             <h1>Download List</h1>
         </div>
+
         <div id="box1" class="img"> 
             
             <div class="box-descrizione">
@@ -83,6 +89,7 @@
                 </ol>
                 <a class="button" href="../datapacklist/Defence Npc.zip">Download for 1.21.1</a></div>
         </div>
+        
     </div>
 </body>
 </html>

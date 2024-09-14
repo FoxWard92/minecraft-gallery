@@ -26,6 +26,30 @@ body {
     background-image: url(../img/datapacks/brand/defence_npc.jpeg);
 }
 
+.container-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    color: white;
+    height: 50%;
+    width: 50%;
+    border-radius: 1vw;
+    background-color: gray;
+    font-size: 2vw;
+    border-bottom: 0.5vw solid rgb(112, 187, 112);
+}
+
+button:hover{
+    background-color: darkgreen;
+}
+
+.img{
+    display: none;
+}
+
 @media all and (min-width:1023px) {
     ol {
         display: none;
