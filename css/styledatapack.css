@@ -29,6 +29,7 @@ body {
 a{
     width: 50%;
     background-color: gray;
+    border-radius: 1vw;
 }
 
 button{
@@ -84,7 +85,7 @@ button:hover{
         display: block;
     }
 
-    .img:focus{
+    .img:active{
         animation: zoom 0.5s;
         animation-fill-mode:forwards;
     }
