@@ -85,7 +85,7 @@ button:hover{
         display: block;
     }
 
-    .img:active{
+    .InWiew{
         animation: zoom 0.5s;
         animation-fill-mode:forwards;
     }

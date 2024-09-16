@@ -21,3 +21,17 @@ function datawiew(n){
     }
     z = n;
 }
+
+function isMobileScroll(){
+        for(var i = 0; i < 6;i++){
+            var q = (c[(z*6)+i]);
+            var ypos = (Math.round(q.getBoundingClientRect().top))/innerHeight;
+            if((ypos) >= -0.25 && (ypos) <= 0.35){
+                q.classList.add('InWiew');
+            }else{
+                q.classList.remove('InWiew');
+            }
+        }
+
+}
+
