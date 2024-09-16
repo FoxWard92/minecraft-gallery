@@ -116,7 +116,7 @@ h1{
 }
 
 
-@media all and (min-width:2300px) and (max-height:1500px){
+@media all and (min-width:2000px) and (max-height:1500px){
     .img {
         background-position: 50% 30%;
     }
@@ -199,17 +199,12 @@ a{
     ;
 }
 
-@keyframes zoom {
-    0% {
-        background-size: 100%;
+@keyframes display {
+    from {
+        opacity: 0;
     }
 
-    ;
-
-    100% {
-        background-size: 110%;
-        ;
+    to {
+        opacity: 1;
     }
-
-    ;
 }

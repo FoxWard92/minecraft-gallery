@@ -26,10 +26,9 @@ body {
     background-image: url(../img/datapacks/brand/defence_npc.jpeg);
 }
 
-.container-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+a{
+    width: 50%;
+    background-color: gray;
 }
 
 button{
@@ -46,8 +45,15 @@ button:hover{
     background-color: darkgreen;
 }
 
+.container-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .img{
     display: none;
+    animation: zoomrevers 0.5s;
 }
 
 @media all and (min-width:1023px) {
@@ -79,7 +85,7 @@ button:hover{
     }
 
     .img:focus{
-        animation: zoom 1s;
+        animation: zoom 0.5s;
         animation-fill-mode:forwards;
     }
 
@@ -104,17 +110,32 @@ li {
     font-weight: bolder;
 }
 
-@keyframes display {
-    from {
-        opacity: 0;
+@keyframes zoom {
+    0% {
+        background-size: 100%;
     }
 
-    to {
-        opacity: 1;
+    ;
+
+    100% {
+        background-size: 115%;
+        ;
     }
+
+    ;
 }
 
-a{
-    width: 50%;
-    background-color: gray;
+@keyframes zoomrevers {
+    from {
+        background-size: 115%;
+    }
+
+    ;
+
+    to {
+        background-size: 100%;
+        ;
+    }
+
+    ;
 }

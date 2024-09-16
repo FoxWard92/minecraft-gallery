@@ -1,7 +1,8 @@
-let z = 0;
-let c = document.getElementsByClassName('img');
+var z = 0;
+var c = document.getElementsByClassName('img');
 
-function wiewwet(n){ 
+function wiewwet(n){
+
     var x = z+n;
     var k = (c.length/6)-1;
     
@@ -13,6 +14,7 @@ function wiewwet(n){
 }
 
 function datawiew(n){
+
     for(var i = 0; i < 6;i++){
         c[(z*6)+i].style.display = 'none';
         c[(n*6)+i].style.display = 'block';
