@@ -92,9 +92,9 @@ h1{
         height: 90vh;
         row-gap: 10%;
         grid-template-columns: 1fr 5fr 1fr;
-        grid-template-rows: 10% repeat(7,70%);
+        grid-template-rows: 10% 70% 70% 70% 70% 70% 70%;
 
-        grid-template-areas: "button1 title button2" ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 ." ". . .";
+        grid-template-areas: "button1 title button2" ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 .";
     }
 
     a:active {
