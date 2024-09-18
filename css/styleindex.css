@@ -1,5 +1,4 @@
 body {
-    margin: 0%;
     background-size: 35%;
     background-image: url(../img/index/background-image.jpg);
 }
@@ -85,9 +84,7 @@ body {
     }
 }
 
-
-a:nth-child(even) {
-    border-left: 0.5vw solid rgb(112, 187, 112);
+.left-a{
     border-right: 0.5vw solid rgb(112, 187, 112);
 }
 

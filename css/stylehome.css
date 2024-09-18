@@ -58,3 +58,7 @@ p{
     overflow: scroll;
     font-size: 120%;
 }
+
+.box-descrizione {
+    height: 97%;
+}
