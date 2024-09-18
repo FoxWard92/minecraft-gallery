@@ -7,13 +7,14 @@ function onloads(){
 }
 
 function isMobileScroll(){
-        var q = document.getElementsByClassName('img');
+        var arr = document.getElementsByClassName('img');
+        var Altezza = window.innerHeight
         for(var i = 0; i < 6;i++){
-            var ypos = (Math.round(q[i].getBoundingClientRect().top))/innerHeight;
+            var ypos = (Math.round(arr[i].getBoundingClientRect().top))/Altezza;
             if((ypos) >= -0.25 && (ypos) <= 0.35){
-                q[i].classList.add('InWiew');
+                arr[i].classList.add('InWiew');
             }else{
-                q[i].classList.remove('InWiew');
+                arr[i].classList.remove('InWiew');
             }
         }
 
