@@ -29,6 +29,7 @@ button:hover{
 }
 
 .img{
+    opacity: 0;
     animation: zoomrevers 0.5s;
 }
 

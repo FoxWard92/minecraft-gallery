@@ -17,12 +17,16 @@ const database = getDatabase(app);
 
 let indexpos = 0;
 
-
-
-window.onloads = async function() {
+window.onloads = async function(n) {
     let rb = document.getElementById('rbutton');
     let lb = document.getElementById('lbutton');
     var max = await countElements();
+    
+    var z = indexpos+n;
+
+    if(z >= 0 && z <= max){   
+        indexpos = z;
+    }
 
     if(((indexpos*6)+6) >= max){
         rb.style.opacity = 0;
@@ -42,6 +46,7 @@ window.loadElemnts = async function(n,max){
     for(var i = 0; i < 6;i++){
         if((interapt+i) < max){
             var key = '100' + i;
+            arr[i].style.opacity = 1;
             arr[i].querySelector('h2').innerText = data[key].title;
             arr[i].querySelector('.l1').innerText = 'Versione : ' + data[key].versione;
             arr[i].querySelector('.l2').innerText = 'Aggiunte : ' + data[key].aggiunte;
