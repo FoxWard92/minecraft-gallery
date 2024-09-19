@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.16.0/firebase-database.js"></script>
     <link rel="stylesheet" href="../css/stylecommon.css" type="text/css">
     <link rel="stylesheet" href="../css/styledatapack.css" type="text/css">
-    <script type="text/javascript" src="../js/datapacks.js"></script>
+    <script type="module" src="../js/datapacks.js" defer></script>
 </head>
 <body onload="onloads()">
     <div class="body-page" onscroll="isMobileScroll()">
@@ -15,7 +17,7 @@
         <div id="rbutton" class="container-button"><button onclick="wiewwet(1)">></button> </div>
 
         <div class="title"> 
-            <h1>Download List</h1>
+            <h1 onclick="countElements()">Download List</h1>
         </div>
 
         <div id="box1" class="img"> 
@@ -23,9 +25,9 @@
             <div class="box-descrizione">
                 <h2>Power Armor</h2>
                 <ol>
-                    <li>Versione : 1.8</li>
-                    <li>Aggiunte : Utilizzo di raggi per armature acqua e inferno. Ottimizaione multigiocatore non piu di 10 comandi eseguiti per giocatore.</li>
-                    <li>Bug Fix  : Rimosso Armatura persistende dopo morte giocatore.Rimossa perdita della aramtura indassata prima</li>
+                    <li class="l1">Versione : 1.8</li>
+                    <li class="l2">Aggiunte : Utilizzo di raggi per armature acqua e inferno. Ottimizaione multigiocatore non piu di 10 comandi eseguiti per giocatore.</li>
+                    <li class="l3">Bug Fix  : Rimosso Armatura persistende dopo morte giocatore.Rimossa perdita della aramtura indassata prima</li>
                 </ol>
 
 
@@ -36,9 +38,9 @@
             <div class="box-descrizione">
                 <h2>Deamon Forest</h2>
                 <ol>
-                    <li>Versione : 1.1</li>
-                    <li>Aggiunte : Modifiche ai suoni ambientali e aggiunta di un follow range di 150 blocchi per adattarlo al datapack defence npc. Ottimmizato il richimmo eventi. Distanza di rendering portale portata a 100 blocchi</li>
-                    <li>Bug Fix  : Rimosso bug visivo sul portale</li>
+                    <li class="l1">Versione : 1.1</li>
+                    <li class="l2">Aggiunte : Modifiche ai suoni ambientali e aggiunta di un follow range di 150 blocchi per adattarlo al datapack defence npc. Ottimmizato il richimmo eventi. Distanza di rendering portale portata a 100 blocchi</li>
+                    <li class="l3">Bug Fix  : Rimosso bug visivo sul portale</li>
                 </ol>
                 <a class="button" href="../datapacklist/Deamon Mobs.zip">Download for 1.21.1</a></div>
         </div>
@@ -47,9 +49,9 @@
             <div class="box-descrizione">
                 <h2>Adv SetHome</h2>
                 <ol>
-                    <li>Versione : 1.0</li>
-                    <li>Aggiunte : Utilizzo di macro e mcfunction per l'uso del /trigger home</li>
-                    <li>Bug Fix  : Rimossa la possibilità di settare la home in dimesioni non vanilla</li>
+                    <li class="l1">Versione : 1.0</li>
+                    <li class="l2">Aggiunte : Utilizzo di macro e mcfunction per l'uso del /trigger home</li>
+                    <li class="l3">Bug Fix  : Rimossa la possibilità di settare la home in dimesioni non vanilla</li>
                 </ol>
                 <a class="button" href="../datapacklist/Advanced SetHome.zip">Download for 1.21.1</a></div>
         </div>
@@ -59,9 +61,9 @@
             <div class="box-descrizione">
                 <h2>Adv Tpa</h2>
                 <ol>
-                    <li>Versione : 1.1</li>
-                    <li>Aggiunte : Migliorati i feedback tellraw e ottimizato per multigiocatore</li>
-                    <li>Bug Fix  : Rimossa possibilita tpa a piu giocatori</li>
+                    <li class="l1">Versione : 1.1</li>
+                    <li class="l2">Aggiunte : Migliorati i feedback tellraw e ottimizato per multigiocatore</li>
+                    <li class="l3">Bug Fix  : Rimossa possibilita tpa a piu giocatori</li>
                 </ol>
                 <a class="button" href="../datapacklist/Advanced Tpa.zip">Download for 1.21.1</a></div>
         </div>
@@ -69,11 +71,11 @@
         <div id="box5" class="img"> 
             
             <div class="box-descrizione">
-                <h2>Adv Factions</h2>
+                <h2></h2>
                 <ol>
-                    <li>Versione : 1.2</li>
-                    <li>Aggiunte : Ottimizato il sistema fazioni</li>
-                    <li>Bug Fix  : Rimosso bug al comando per invitare i mebri</li>
+                    <li class="l1"></li>
+                    <li class="l2"></li>
+                    <li class="l3"></li>
                 </ol>
                 <a class="button" href="../datapacklist/Advanced Factions.zip">Download for 1.21.1</a></div>
         </div>
@@ -81,11 +83,11 @@
         <div id="box6" class="img"> 
             
             <div class="box-descrizione">
-                <h2>Defence Npc</h2>
+                <h2></h2>
                 <ol>
-                    <li>Versione : 1.8</li>
-                    <li>Aggiunte : Aggiunta di torreta minigun. Ottimizazione generale. Sistema di puntamento migliorato</li>
-                    <li>Bug Fix  : Rimosso sovraccarico compiti di aquisizione bersaglio in presenza di piu di 200 bersagli che limitava la precisione</li>
+                    <li class="l1"></li>
+                    <li class="l2"></li>
+                    <li class="l3"></li>
                 </ol>
                 <a class="button" href="../datapacklist/Defence Npc.zip">Download for 1.21.1</a></div>
         </div>
