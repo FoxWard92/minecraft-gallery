@@ -52,7 +52,6 @@ window.loadElemnts = async function(n,max,data){
     var arr = document.getElementsByClassName('img');
     var interapt = (n*6);
     for(var i = 0; i < 6;i++){
-        arr[i].style.opacity = 0;
         if((interapt+i) < max){
             var key = '100' + (i+(n*6));
             arr[i].style.opacity = 1;
@@ -62,6 +61,8 @@ window.loadElemnts = async function(n,max,data){
             arr[i].querySelector('.l3').innerText = 'Bug Fix  : ' + data[key].bugfix;
             arr[i].style.backgroundImage = `url(${data[key].immagine})`;
             arr[i].querySelector('a').href = data[key].datapack;
+        }else{
+            arr[i].style.opacity = 0;
         }
     }
 };
