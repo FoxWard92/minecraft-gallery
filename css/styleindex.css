@@ -3,6 +3,10 @@ body {
     background-image: url(../img/index/background-image.jpg);
 }
 
+a{
+    width: 100%;
+}
+
 @media all and (min-width:1023px) {
     
     iframe {

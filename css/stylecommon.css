@@ -13,6 +13,17 @@ h1{
     color: white;
 }
 
+ol{
+    color: white;
+    overflow: scroll;
+    margin: 0%;
+    background-color: rgba(128, 128, 128, 0.720);
+}
+
+li{
+    font-size: 120%;
+}
+
 @media all and (min-width:1023px) {
     h1 {
         font-size: 2vw;
@@ -140,7 +151,6 @@ a{
     text-transform: uppercase;
     text-decoration: none;
     padding: 5%;
-    width: 100%;
 }
 
 

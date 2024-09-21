@@ -72,16 +72,11 @@ button:hover{
 
 ol {
     text-align: left;
-    color: white;
-
-    overflow: scroll;
-    margin-left: 3%;
-    margin-right: 3%;
     height: 30%;
     width: 80%;
+    margin-bottom: 3%;
     padding-top: 3%;
     border-radius: 1vw;
-    background-color: rgba(128, 128, 128, 0.658);
 }
 
 li {

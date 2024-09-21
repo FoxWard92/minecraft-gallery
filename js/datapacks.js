@@ -29,9 +29,9 @@ window.onloads = async function(n) {
 
     if(z >= 0 && z <= (max/6)){   
         indexpos = z;
-    
+        loadElemnts(indexpos,max,data);
     }
-
+    
     if(((indexpos*6)+6) < max){
         rb.style.opacity = 1;
     }else{
@@ -44,36 +44,38 @@ window.onloads = async function(n) {
         lb.style.opacity = 0; 
     }
     
-    loadElemnts(indexpos,max,data);
+    
     
 };
 
 window.loadElemnts = async function(n,max,data){
-    var arr = document.getElementsByClassName('img');
-    var interapt = (n*6);
+    const arr = document.getElementsByClassName('img');
+    const interapt = (n*6);
     for(var i = 0; i < 6;i++){
         if((interapt+i) < max){
-            var key = '100' + (i+(n*6));
-            arr[i].style.opacity = 1;
-            arr[i].querySelector('h2').innerText = data[key].title;
-            arr[i].querySelector('.l1').innerText = 'Versione : ' + data[key].versione;
-            arr[i].querySelector('.l2').innerText = 'Aggiunte : ' + data[key].aggiunte;
-            arr[i].querySelector('.l3').innerText = 'Bug Fix  : ' + data[key].bugfix;
-            arr[i].style.backgroundImage = `url(${data[key].immagine})`;
-            arr[i].querySelector('a').href = data[key].datapack;
+            const key = data['100' + (i+(n*6))];
+            const itemdata = arr[i];
+            itemdata.style.opacity = 1;
+            itemdata.querySelector('h2').innerText = key.title;
+            itemdata.style.backgroundImage = `url(${key.immagine})`;
+            itemdata.querySelector('.l1').innerText = 'Versione Datapack : ' + key.versione;
+            itemdata.querySelector('.l2').innerText = 'Aggiunte : ' + key.aggiunte;
+            itemdata.querySelector('.l3').innerText = 'Bug Fix  : ' + key.bugfix;
+            itemdata.querySelector('a').href =key.datapack;
+            itemdata.querySelector('a').innerText = 'Download For ' + key.versionegioco;
         }else{
             arr[i].style.opacity = 0;
         }
     }
 };
 
-async function getDataForNode(nodeId) {
+window.getDataForNode = async function (nodeId) {
     const dbRef = ref(database, `/${nodeId}`);
     try {
-        const snapshot = await get(ref(database, `/${nodeId}`));
+        const snapshot = await get(dbRef);
         if (snapshot.exists()) {
             const data = snapshot.val();
-            max = Object.keys(snapshot.val()).length;
+            max = Object.keys(data).length;
             return data;
         } else {
             console.log(`No data found for node ${nodeId}`);
@@ -81,6 +83,7 @@ async function getDataForNode(nodeId) {
         }
     } catch (error) {
         console.error("Error getting data:", error);
+        return null
     }
 };
 
