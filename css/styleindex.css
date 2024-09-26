@@ -3,13 +3,41 @@ body {
     background-image: url(../img/index/background-image.jpg);
 }
 
+iframe {
+    height: 100%;
+    width: 100%;
+    grid-area: article;
+}
+
+a{
+    background-color: gray;
+    transition: transform 0.1s ease-in-out;
+}
+
+.nav-bar {
+    grid-area: header;
+    background-color: rgba(244, 255, 235, 0.464);
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    background-color: rgb(112, 187, 112);
+    border-bottom: 0.5vw solid rgb(112, 187, 112);
+}
+
+.article-selection {
+    grid-area: article;
+}
+
 @media all and (min-width:1023px) {
-    
     iframe {
-        height: 100%;
-        width: calc(100% - 0.5vw);
         border-left: solid rgb(112, 187, 112) 0.5vw;
-        grid-area: article;
+    }
+    a{
+        width: 22%;
+        padding: 5%;
+        background-color: gray;
     }
 
     .title {
@@ -36,6 +64,11 @@ body {
         grid-template-areas: "title article" ". article" "header article";
 
     }
+
+    .nav-content{
+        justify-content: space-between;
+    }
+    
 }
 
 @media all and (max-width:1022px){
@@ -44,15 +77,10 @@ body {
         background-position: center;
         background-size: 100%;
     }
-
-    iframe {
-        height: 100%;
-        width: calc(100% - 0.5vw);
-        grid-area: article;
-    }
     
     a{
-        padding: 0%;
+        padding: 1%;
+        width: 30%;
     }
 
     .title {
@@ -63,7 +91,8 @@ body {
     }
     
     .nav-content{
-        height: 100%;
+        justify-content: space-around;
+        border-bottom: 1vw solid rgb(112, 187, 112);
     }
     
 
@@ -82,27 +111,4 @@ body {
         grid-template-areas: "title" "header" "article";
 
     }
-}
-
-a{
-    width: 22%;
-    background-color: gray;
-    transition: transform 0.1s ease-in-out;
-}
-
-.nav-bar {
-    grid-area: header;
-    background-color: rgba(244, 255, 235, 0.464);
-}
-
-.nav-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgb(112, 187, 112);
-    border-bottom: 0.5vw solid rgb(112, 187, 112);
-}
-
-.article-selection {
-    grid-area: article;
 }
