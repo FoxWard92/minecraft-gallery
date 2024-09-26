@@ -91,10 +91,8 @@ a{
 }
 
 .active-button{
-    transform:translateY(10px);
+    transform:translateY(0.5vw);
 }
-
-
 
 .nav-bar {
     grid-area: header;
