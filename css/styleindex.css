@@ -90,10 +90,6 @@ a{
     transition: transform 0.1s ease-in-out;
 }
 
-.active-button{
-    transform:translateY(0.5vw);
-}
-
 .nav-bar {
     grid-area: header;
     background-color: rgba(244, 255, 235, 0.464);
