@@ -15,14 +15,23 @@ body{
 }
 
 #box4{
+    animation: led 2.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     background-image: url(../img/home/datapacks/powerarmor.jpg);
 }
 
 #box5{
+    animation: led 2.1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     background-image: url(../img/home/datapacks/deamon_forest.jpg);
 }
 
 #box6{
+    animation: led 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     background-image: url(../img/home/datapacks/set_home.jpg);
 }
 
@@ -54,3 +63,36 @@ p{
 .box-descrizione {
     height: 97%;
 }
+
+@media all and (min-width:1023px) {
+    .body-page {
+        grid-template-columns: 2.5% 30% 2.5% 30% 2.5% 30% 2.5%;
+        grid-template-rows: 5% 10% 5% 40% 5% 30% 5%;
+        grid-template-areas: ". . . . . . . " ". . . title . . ." ". . . . . . ." ". box1 . box2 . box3 ." " . . . . . . ." ". box4 . box5 . box6 ." " . . . . . . .";
+    }
+}
+
+@media all and (max-width:1022px){
+    .body-page{
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 10% 70% 70% 70% 70% 70% 70%;
+        grid-template-areas: ". title ." ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 ."; 
+    }
+    
+}
+
+@keyframes leds {
+    0% {border-top-color: rgb(0, 100, 200);border-left-color: rgb(0, 146, 214);border-bottom-color: rgb(0, 200, 255);border-right-color: rgb(0, 147, 214);}
+    25% {border-top-color: rgb(0, 146, 214);border-left-color: rgb(0, 200, 255);border-bottom-color: rgb(0, 147, 214);border-right-color: rgb(0, 100, 200);}
+    50% {border-top-color: rgb(0, 200, 255);border-left-color: rgb(0, 147, 214);border-bottom-color: rgb(0, 100, 200);border-right-color: rgb(0, 146, 214);}
+    75% {border-top-color: rgb(0, 147, 214);border-left-color: rgb(0, 100, 200);border-bottom-color: rgb(0, 146, 214);border-right-color: rgb(0, 200, 255);}
+    100% {border-top-color: rgb(0, 100, 200);border-left-color: rgb(0, 146, 214);border-bottom-color: rgb(0, 200, 255);border-right-color: rgb(0, 121, 255)}
+ }
+
+ @keyframes led{
+    0%  {box-shadow: 0.1vw 0.1vw 1vw rgb(10, 100, 200)}
+    25% {box-shadow: 0.1vw 0.1vw 1vw rgb(10, 140, 200)}
+    50% {box-shadow: 0.1vw 0.1vw 1vw rgb(10, 180, 200)}
+    75% {box-shadow: 0.1vw 0.1vw 1vw rgb(10, 220, 200)}
+    100% {box-shadow: 0.1vw 0.1vw 1vw rgb(10, 100, 200)}
+ }

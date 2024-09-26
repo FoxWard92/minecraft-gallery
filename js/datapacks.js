@@ -44,8 +44,7 @@ window.onloads = async function(n) {
         lb.style.opacity = 0; 
     }
     
-    
-    
+    document.getElementsByClassName('body-page')[0].style.opacity = 1;
 };
 
 window.loadElemnts = async function(n,max,data){

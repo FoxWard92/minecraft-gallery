@@ -23,6 +23,20 @@ button:hover{
     background-color: darkgreen;
 }
 
+ol {
+    text-align: left;
+    height: 30%;
+    width: 80%;
+    margin-bottom: 3%;
+    padding-top: 3%;
+    border-radius: 1vw;
+}
+
+li {
+    font-size: 120%;
+    font-weight: bolder;
+}
+
 .container-button{
     display: flex;
     opacity: 0;
@@ -32,10 +46,19 @@ button:hover{
 
 .img{
     opacity: 0;
-    animation: zoomrevers 0.5s;
+    box-shadow: 0.1vw 0.1vw 0.5vw white;
+    background-size: 100%;
+    transition: background-size 0.25s ease-in-out;
 }
 
 @media all and (min-width:1023px) {
+
+    .body-page {
+        grid-template-columns: 7.5% 25% 2.5% 2.5% 25% 2.5% 2.5% 25% 7.5%;
+        grid-template-rows: 5% 10% 5% 35% 2.5% 35% 2.5%;
+        grid-template-areas: ". . . . . . . . ." ". button1 . title title title . button2 ." ". . . . . . . . ." ". box1 . . box2 . . box3 ." ". . . . . . . . ." ". box4 . . box5 . . box6 ." ". . . . . . . . .";
+    }
+
     ol {
         display: none;
     }
@@ -52,13 +75,19 @@ button:hover{
     
 
     .img:hover{
-        animation: zoom 0.5s;
-        animation-fill-mode:forwards;
+        background-size: 115%;
     }
 
 }
 
 @media all and (max-width:1022px) {
+
+    .body-page{
+        grid-template-columns: 1fr 5fr 1fr;
+        grid-template-rows: 10% 70% 70% 70% 70% 70% 70%;
+        grid-template-areas: "button1 title button2" ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 .";
+    }
+    
     ol {
         display: block;
     }
@@ -70,46 +99,14 @@ button:hover{
 
 }
 
-ol {
-    text-align: left;
-    height: 30%;
-    width: 80%;
-    margin-bottom: 3%;
-    padding-top: 3%;
-    border-radius: 1vw;
-}
 
-li {
-    font-size: 120%;
-    font-weight: bolder;
-}
 
-@keyframes zoom {
-    0% {
-        background-size: 100%;
-    }
-
-    ;
-
-    100% {
-        background-size: 115%;
-        ;
-    }
-
-    ;
-}
-
-@keyframes zoomrevers {
+@keyframes display {
     from {
-        background-size: 115%;
+        opacity: 0;
     }
-
-    ;
 
     to {
-        background-size: 100%;
-        ;
+        opacity: 1;
     }
-
-    ;
 }

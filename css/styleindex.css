@@ -3,10 +3,6 @@ body {
     background-image: url(../img/index/background-image.jpg);
 }
 
-a{
-    width: 100%;
-}
-
 @media all and (min-width:1023px) {
     
     iframe {
@@ -88,9 +84,17 @@ a{
     }
 }
 
-.left-a{
-    border-right: 0.5vw solid rgb(112, 187, 112);
+a{
+    width: 22%;
+    background-color: gray;
+    transition: transform 0.1s ease-in-out;
 }
+
+.active-button{
+    transform:translateY(10px);
+}
+
+
 
 .nav-bar {
     grid-area: header;
@@ -100,8 +104,8 @@ a{
 .nav-content {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: gray;
+    justify-content: space-between;
+    background-color: rgb(112, 187, 112);
     border-bottom: 0.5vw solid rgb(112, 187, 112);
 }
 

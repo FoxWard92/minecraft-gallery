@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/stylecommon.css" type="text/css">
     <link rel="stylesheet" href="css/styleindex.css" type="text/css">
     <link rel="icon" href="favicon.ico">
+    <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
     <div class="main-container">
@@ -20,9 +21,9 @@
         
         <div class="nav-bar">
             <div class="nav-content">
-                <a href="html/home.html" target="iframe_a" class="left-a">Home</a>
-                <a href="html/datapack.html" target="iframe_a" class="left-a">Datapack</a>
-                <a href="https://www.youtube.com/@FoxWard92" target="_blank" class="">Youtube</a>
+                <a href="html/home.html" target="iframe_a" class="link active-button" onclick="clicklink(0)">Home</a>
+                <a href="html/datapack.html" target="iframe_a"  class="link" onclick="clicklink(1)">Datapack</a>
+                <a href="https://www.youtube.com/@FoxWard92" target="_blank" class="link" onclick="clicklink(2)">Youtube</a>
             </div>
         </div>
             <iframe src="html/home.html" frameborder="0" name="iframe_a"></iframe>
