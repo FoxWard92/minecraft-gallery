@@ -23,7 +23,7 @@ window.onloads = async function(n) {
     let rb = document.getElementById('rbutton');
     let lb = document.getElementById('lbutton');
 
-    var data = await getDataForNode(('data'));
+    var data = await getDataForNode(('datapacks'));
     
     var z = indexpos+n;
 

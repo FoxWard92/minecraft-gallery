@@ -35,10 +35,6 @@ body{
     background-image: url(../img/home/datapacks/set_home.jpg);
 }
 
-a{
-    padding: 5%;
-}
-
 ol{
     width: 80%;
     height: 80%;
@@ -69,6 +65,11 @@ p{
 }
 
 @media all and (min-width:1023px) {
+
+    a{
+        padding: 2%;
+    }
+
     .body-page {
         grid-template-columns: 2.5% 30% 2.5% 30% 2.5% 30% 2.5%;
         grid-template-rows: 5% 10% 5% 40% 5% 30% 5%;
@@ -77,6 +78,11 @@ p{
 }
 
 @media all and (max-width:1022px){
+
+    a{
+        padding: 1%;
+    }
+
     .body-page{
         grid-template-columns: 5% 90% 5%;
         grid-template-rows: 10% 70% 70% 70% 70% 70% 70%;
@@ -84,14 +90,6 @@ p{
     }
     
 }
-
-@keyframes leds {
-    0% {border-top-color: rgb(0, 100, 200);border-left-color: rgb(0, 146, 214);border-bottom-color: rgb(0, 200, 255);border-right-color: rgb(0, 147, 214);}
-    25% {border-top-color: rgb(0, 146, 214);border-left-color: rgb(0, 200, 255);border-bottom-color: rgb(0, 147, 214);border-right-color: rgb(0, 100, 200);}
-    50% {border-top-color: rgb(0, 200, 255);border-left-color: rgb(0, 147, 214);border-bottom-color: rgb(0, 100, 200);border-right-color: rgb(0, 146, 214);}
-    75% {border-top-color: rgb(0, 147, 214);border-left-color: rgb(0, 100, 200);border-bottom-color: rgb(0, 146, 214);border-right-color: rgb(0, 200, 255);}
-    100% {border-top-color: rgb(0, 100, 200);border-left-color: rgb(0, 146, 214);border-bottom-color: rgb(0, 200, 255);border-right-color: rgb(0, 121, 255)}
- }
 
  @keyframes led{
     0%  {box-shadow: 0.1vw 0.1vw 1vw rgb(10, 100, 200)}

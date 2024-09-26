@@ -93,8 +93,7 @@ li {
     }
 
     .InWiew{
-        animation: zoom 0.5s;
-        animation-fill-mode:forwards;
+        background-size: 115%;
     }
 
 }
