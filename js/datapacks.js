@@ -8,7 +8,7 @@ var data = JSON.parse(localStorage.getItem("datapacks"));
 window.onloads = async function(n) {
     var z = indexpos+n;
 
-    if(z >= 0 && z <= (max/6)){   
+    if(z >= 0 && z < (max/6)){   
         indexpos = z;
         await loadElemnts(indexpos,max,data);
     }
