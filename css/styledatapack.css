@@ -25,13 +25,13 @@ ol {
     height: 30%;
     width: 80%;
     margin-bottom: 3%;
-    padding-top: 3%;
+    padding-top: 2%;
     border-radius: 1vw;
 }
 
 li {
-    font-size: 120%;
     font-weight: bolder;
+    margin-top: 1%;
 }
 
 .container-button{
