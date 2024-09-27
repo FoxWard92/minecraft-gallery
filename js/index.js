@@ -28,7 +28,7 @@ window.clicklink = function(n){
     button[z].classList.remove('active-link');
     button[n].classList.add('active-link');
     z = n
-}
+} 
 
 window.getDataForNode = async function (nodeId) {
     const dbRef = ref(database, `/${nodeId}`);
