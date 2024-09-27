@@ -15,23 +15,14 @@ body{
 }
 
 #box4{
-    animation: led 2.2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
     background-image: url(../img/home/datapacks/powerarmor.jpg);
 }
 
 #box5{
-    animation: led 2.1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
     background-image: url(../img/home/datapacks/deamon_forest.jpg);
 }
 
 #box6{
-    animation: led 2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
     background-image: url(../img/home/datapacks/set_home.jpg);
 }
 
@@ -64,6 +55,14 @@ p{
     height: 97%;
 }
 
+.news{   
+    animation: led 2.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-size: 100%;
+    transition: background-size 0.15s ease-in-out , transform 0.15s ease-in-out;
+}
+
 @media all and (min-width:1023px) {
 
     a{
@@ -74,6 +73,11 @@ p{
         grid-template-columns: 2.5% 30% 2.5% 30% 2.5% 30% 2.5%;
         grid-template-rows: 5% 10% 5% 40% 5% 30% 5%;
         grid-template-areas: ". . . . . . . " ". . . title . . ." ". . . . . . ." ". box1 . box2 . box3 ." " . . . . . . ." ". box4 . box5 . box6 ." " . . . . . . .";
+    }
+    
+    .news:hover{
+        background-size: 115%;
+        transform: scale(1.1);
     }
 }
 

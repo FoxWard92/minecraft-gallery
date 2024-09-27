@@ -44,7 +44,7 @@ li {
 .img{
     opacity: 0;
     background-size: 100%;
-    transition: background-size 0.25s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
 @media all and (min-width:1023px) {
@@ -58,7 +58,7 @@ li {
 
     .body-page {
         grid-template-columns: 7.5% 25% 2.5% 2.5% 25% 2.5% 2.5% 25% 7.5%;
-        grid-template-rows: 5% 10% 5% 35% 2.5% 35% 2.5%;
+        grid-template-rows: 5% 10% 5% 35% 5% 35% 5%;
         grid-template-areas: ". . . . . . . . ." ". button1 . title title title . button2 ." ". . . . . . . . ." ". box1 . . box2 . . box3 ." ". . . . . . . . ." ". box4 . . box5 . . box6 ." ". . . . . . . . .";
     }
 
@@ -66,18 +66,19 @@ li {
         display: none;
     }
 
-    .box-descrizione:hover>ol {
+    .img>.box-descrizione:hover>ol {
         display: block;
         animation: display 0.5s;
     }
 
 
-    .box-descrizione:hover>h2 {
+    .img>.box-descrizione:hover>h2 {
         display: none;
     }
     
 
     .img:hover{
+        transform: scale(1.2);
         background-size: 115%;
     }
 
