@@ -84,7 +84,7 @@ p{
     }
 
     .body-page{
-        grid-template-columns: 5% 90% 5%;
+        grid-template-columns: 1fr 5fr 1fr;
         grid-template-rows: 10% 70% 70% 70% 70% 70% 70%;
         grid-template-areas: ". title ." ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 ."; 
     }

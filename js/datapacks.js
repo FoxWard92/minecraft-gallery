@@ -1,31 +1,20 @@
 
-let max = 0;
-
 let indexpos = 0;
 
+var max = localStorage.getItem("datapacksmax");
+
+var data = JSON.parse(localStorage.getItem("datapacks"));
+
 window.onloads = async function(n) {
-    let rb = document.getElementById('rbutton');
-    let lb = document.getElementById('lbutton');
-    
     var z = indexpos+n;
 
     if(z >= 0 && z <= (max/6)){   
         indexpos = z;
-        await loadElemnts(indexpos,localStorage.getItem("datapacksmax"),JSON.parse(localStorage.getItem("datapacks")));
-    }
-    
-    if(((indexpos*6)+6) < max){
-        rb.style.opacity = 1;
-    }else{
-        rb.style.opacity = 0;
+        await loadElemnts(indexpos,max,data);
     }
 
-    if((indexpos*6) > 0){
-        lb.style.opacity = 1; 
-    }else{
-        lb.style.opacity = 0; 
-    }
-    
+    document.getElementById('rbutton').style.opacity = ((indexpos*6)+6) < max ? 1:0;
+    document.getElementById('lbutton').style.opacity = ((indexpos*6)) > 0 ? 1:0; 
     document.getElementsByClassName('body-page')[0].style.opacity = 1;
 };
 
@@ -52,9 +41,8 @@ window.loadElemnts = function(n,max,data){
 
 window.isMobileScroll = function() {
     var arr = document.getElementsByClassName('img');
-    var Altezza = window.innerHeight;
     for (var i = 0; i < 6; i++) {
-        var ypos = (Math.round(arr[i].getBoundingClientRect().top)) / Altezza;
+        var ypos = (Math.round(arr[i].getBoundingClientRect().top)) / window.innerHeight;
         if ((ypos) >= -0.25 && (ypos) <= 0.35) {
             arr[i].classList.add('InWiew');
         } else {
