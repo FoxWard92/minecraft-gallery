@@ -4,7 +4,7 @@ window.onloads = async function() {
     document.getElementsByClassName('body-page')[0].style.opacity = 1;
 };
 
-window.loadElemnts = async function(max,data){
+window.loadElemnts = function(max,data){
     const arr = document.getElementsByClassName('img');
     for(var i = 3; i < 6;i++){
         if((i-3) <= max){

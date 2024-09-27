@@ -29,7 +29,7 @@ window.onloads = async function(n) {
     document.getElementsByClassName('body-page')[0].style.opacity = 1;
 };
 
-window.loadElemnts = async function(n,max,data){
+window.loadElemnts = function(n,max,data){
     const arr = document.getElementsByClassName('img');
     const interapt = (n*6);
     for(var i = 0; i < 6;i++){

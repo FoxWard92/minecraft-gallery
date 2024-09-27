@@ -17,17 +17,10 @@ const database = getDatabase(app);
 
 let z = 0;
 
-let max = 0;
-
 window.onloads = async function(){
 
-    var data = await getDataForNode(('datapacks'));
-    localStorage.setItem("datapacks",JSON.stringify(data));
-    localStorage.setItem("datapacksmax",max)
-
-    var data = await getDataForNode(('news'));
-    localStorage.setItem("news",JSON.stringify(data));
-    localStorage.setItem("newsmax",max);
+    await getDataForNode(('datapacks'));
+    await getDataForNode(('news'));
 }
 
 window.clicklink = function(n){
@@ -43,8 +36,8 @@ window.getDataForNode = async function (nodeId) {
         const snapshot = await get(dbRef);
         if (snapshot.exists()) {
             const data = snapshot.val();
-            max = Object.keys(data).length;
-            return data;
+            localStorage.setItem(nodeId,JSON.stringify(data));
+            localStorage.setItem(nodeId + 'max',Object.keys(data).length);
         } else {
             console.log(`No data found for node ${nodeId}`);
             return null;
