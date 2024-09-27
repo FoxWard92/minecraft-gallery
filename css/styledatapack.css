@@ -104,6 +104,7 @@ li {
     }
 
     .InWiew{
+        transform: scale(1.2);
         background-size: 115%;
     }
 
