@@ -58,7 +58,7 @@ p{
 .news{   
     animation: led 2.2s infinite linear;
     background-size: 100%;
-    transition: background-size 0.15s ease-in-out , transform 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
 }
 
 @media all and (min-width:1023px) {
@@ -87,8 +87,8 @@ p{
 
     .body-page{
         grid-template-columns: 1fr 5fr 1fr;
-        grid-template-rows: 10% 70% 70% 70% 70% 70% 70%;
-        grid-template-areas: ". title ." ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 ."; 
+        grid-template-rows: 10% 70% 70% 70% 70% 70% 70% 10%;
+        grid-template-areas: ". title ." ". box1 ." ". box2 ." ". box3 . " ". box4 ." ". box5 ." ". box6 ." ". . ."; 
     }
     
 }

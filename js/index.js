@@ -38,6 +38,7 @@ window.getDataForNode = async function (nodeId) {
             const data = snapshot.val();
             localStorage.setItem(nodeId,JSON.stringify(data));
             localStorage.setItem(nodeId + 'max',Object.keys(data).length);
+            return 1
         } else {
             console.log(`No data found for node ${nodeId}`);
             return null;
