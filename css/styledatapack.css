@@ -43,8 +43,8 @@ li {
 
 .img{
     opacity: 0;
-    background-size: 100%;
-    transition: all 0.15s ease-in-out;
+    background-size: 120%;
+    transition: all 0.2s ease-in-out;
 }
 
 @media all and (min-width:1023px) {
@@ -66,20 +66,25 @@ li {
         display: none;
     }
 
-    .img>.box-descrizione:hover>ol {
+    .img:hover>.box-descrizione>ol {
         display: block;
         animation: display 0.5s;
     }
 
 
-    .img>.box-descrizione:hover>h2 {
+    .img:hover>.box-descrizione>h2 {
         display: none;
     }
     
 
     .img:hover{
-        transform: scale(1.2);
-        background-size: 115%;
+        box-shadow: 0vw 0.5vw 2vw 0.5vw gray;
+        transform: matrix3d(
+        1, -0.007, 0, 0,
+        0, 1, 1, -0.0002,
+        0, 0, 1, 0,
+        2, -15, 0, 0.85       );
+        background-size: 100%;
     }
 
 }
