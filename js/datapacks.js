@@ -16,7 +16,7 @@ window.onloads = async function(n) {
     document.getElementById('rbutton').style.opacity = ((indexpos*6)+6) < max ? 1:0;
     document.getElementById('lbutton').style.opacity = ((indexpos*6)) > 0 ? 1:0; 
     document.getElementsByClassName('body-page')[0].style.opacity = 1;
-}; 
+};
 
 window.loadElemnts = function(n,max,data){
     const arr = document.getElementsByClassName('img');
