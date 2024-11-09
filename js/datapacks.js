@@ -23,7 +23,7 @@ window.loadElemnts = function(n,max,data){
     const interapt = (n*6);
     for(var i = 0; i < 6;i++){
         if((interapt+i) < max){
-            const key = data['100' + (i+(n*6))];
+            const key = data[(i+(n*6))];
             const itemdata = arr[i];
             itemdata.style.opacity = 1;
             itemdata.querySelector('h2').innerText = key.title;
