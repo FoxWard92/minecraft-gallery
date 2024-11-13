@@ -15,19 +15,19 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-let z = 0;
-
-window.onloads = async function(){
-
-    await getDataForNode(('datapacks'));
-    await getDataForNode(('news'));
+window.onload = async function(){
+    localStorage.setItem('data',JSON.stringify(await getDataForNode('')))
 }
 
-window.clicklink = function(n){
+window.LinkIsClick = function(n){
     const button = document.getElementsByClassName('link');
-    button[z].classList.remove('active-link');
-    button[n].classList.add('active-link');
-    z = n
+    for (var i = button.length-1; i >= 0;i--){
+        if(i == n){
+            button[i].classList.add('active-link');
+        }else{
+            button[i].classList.remove('active-link');
+        }
+    }
 }
 
 window.getDataForNode = async function (nodeId) {
@@ -36,9 +36,7 @@ window.getDataForNode = async function (nodeId) {
         const snapshot = await get(dbRef);
         if (snapshot.exists()) {
             const data = snapshot.val();
-            localStorage.setItem(nodeId,JSON.stringify(data));
-            localStorage.setItem(nodeId + 'max',Object.keys(data).length);
-            return 1
+            return data
         } else {
             console.log(`No data found for node ${nodeId}`);
             return null;

@@ -1,22 +1,25 @@
 
-window.onloads = async function() {
-    await loadElemnts(localStorage.getItem("newsmax"),JSON.parse(localStorage.getItem("news")));
+let datalist = JSON.parse(localStorage.getItem('data'))
+
+window.onload = async function() {
+    await loadElemnts(datalist.news);
     document.getElementsByClassName('body-page')[0].style.opacity = 1;
 };
 
-window.loadElemnts = function(max,data){
+window.loadElemnts = function(data){
+    max = data.length
     if(data != null){
-        const arr = document.getElementsByClassName('img');
-        for(var i = 3; i < 6;i++){
-            if((i-3) <= max){
-                const key = data[(i-3)];
-                const itemdata = arr[i];
+        for(var i = 0; i < 3;i++){
+            const itemdata = document.getElementById(`box${i+4}`)
+            if(i <= max){
+                const key = data[(i)];
+                const descrizione = itemdata.firstElementChild;
                 itemdata.style.opacity = 1;
-                itemdata.querySelector('h2').innerText = '[NUOVO] ' + key.title;
+                descrizione.children[0].innerText = '[NUOVO] ' + key.title;
                 itemdata.style.backgroundImage = `url(${key.immagine})`;
-                itemdata.querySelector('p').innerText = key.descrizione;
+                descrizione.children[1].innerText = key.descrizione;
             }else{
-                arr[i].style.opacity = 0;
+                itemdata.style.opacity = 0;
             }
         }
     }

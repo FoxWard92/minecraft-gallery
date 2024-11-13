@@ -1,43 +1,51 @@
 
-let indexpos = 0;
+let indexpos = 0
 
-var max = localStorage.getItem("datapacksmax");
+let datalist = JSON.parse(localStorage.getItem('data'))
 
-var data = JSON.parse(localStorage.getItem("datapacks"));
+window.onload = async function() {
 
-window.onloads = async function(n) {
-    var z = indexpos+n;
+    await MoveIndex(indexpos);
 
-    if(z >= 0 && z < (max/6)){   
-        indexpos = z;
-        await loadElemnts(indexpos,max,data);
-    }
-
-    document.getElementById('rbutton').style.opacity = ((indexpos*6)+6) < max ? 1:0;
-    document.getElementById('lbutton').style.opacity = ((indexpos*6)) > 0 ? 1:0; 
     document.getElementsByClassName('body-page')[0].style.opacity = 1;
 };
 
-window.loadElemnts = function(n,max,data){
-    const arr = document.getElementsByClassName('img');
-    const interapt = (n*6);
+window.loadElemnts = async function(data){
+    const max = data.length;
     for(var i = 0; i < 6;i++){
-        if((interapt+i) < max){
-            const key = data[(i+(n*6))];
-            const itemdata = arr[i];
+        const itemdata = document.getElementById(`box${i+1}`) 
+        if(i < max){
+            const key = data[i];
             itemdata.style.opacity = 1;
-            itemdata.querySelector('h2').innerText = key.title;
             itemdata.style.backgroundImage = `url(${key.immagine})`;
-            itemdata.querySelector('.l1').innerText = 'Versione Datapack : ' + key.versione;
-            itemdata.querySelector('.l2').innerText = 'Aggiunte : ' + key.aggiunte;
-            itemdata.querySelector('.l3').innerText = 'Bug Fix  : ' + key.bugfix;
-            itemdata.querySelector('a').href =key.datapack;
-            itemdata.querySelector('a').innerText = 'Download For ' + key.versionegioco;
+            const descrizione = itemdata.firstElementChild
+            const a = itemdata.firstElementChild.children[2]
+            descrizione.children[0].innerText = key.title;
+            const ol = descrizione.children[1]; 
+            ol.children[0].innerText = 'Versione Datapack : ' + key.versione;
+            ol.children[1].innerText = 'Aggiunte : ' + key.aggiunte;
+            ol.children[2].innerText = 'Bug Fix  : ' + key.bugfix;
+            a.href = key.datapack;
+            a.innerText = 'Download For ' + key.versionegioco;
         }else{
-            arr[i].style.opacity = 0;
+            itemdata.style.opacity = 0;
         }
     }
 };
+
+window.MoveIndex = async function (n){
+    let z = indexpos + n;
+    if(z >= 0 && z < datalist.datapacks.length){
+        indexpos = indexpos + n;
+
+        document.getElementById('rbutton').style.opacity = datalist.datapacks.length-1 > indexpos ? 1:0;
+
+        document.getElementById('lbutton').style.opacity = indexpos > 0 ? 1:0;
+
+        await loadElemnts(datalist.datapacks[indexpos])
+    }
+} 
+
 
 window.isMobileScroll = function() {
     var arr = document.getElementsByClassName('img');
