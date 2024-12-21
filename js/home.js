@@ -16,7 +16,6 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
 window.onload = async function() {
-    loadbar.style.opacity = 1;
     await loadElemnts(await getDataForNode('news'));
     document.getElementsByClassName('body-page')[0].style.opacity = 1;
 };
