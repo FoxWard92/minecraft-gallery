@@ -14,6 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
+
 const button = document.getElementsByClassName('link');
 const iframe = document.getElementById('iframe');
 
@@ -21,7 +22,7 @@ window.onload = async function(){
     localStorage.setItem('data',JSON.stringify(await getDataForNode('')))
 }
 
-window.LinkIsClick = function(n,src){
+window.LinkIsClick = function(n,callback){
     for (var i = button.length-1; i >= 0;i--){
         if(i == n){
             button[i].classList.add('active-link');
@@ -29,11 +30,19 @@ window.LinkIsClick = function(n,src){
             button[i].classList.remove('active-link');
         }
     }
-    if(n < 2){
-        iframe.src = src;
-    }else{
-        window.open("https://www.youtube.com/@FoxWard92", '_blank');
-    }
+    callback();
+}
+
+window.opendatapacks = function(){
+    iframe.src = "html/datapack.html";
+}
+
+window.openhome = function(){
+    iframe.src = "html/home.html";
+}
+
+window.openyoutube = function(){
+    window.open("https://www.youtube.com/@FoxWard92", '_blank');
 }
 
 window.getDataForNode = async function (nodeId) {
