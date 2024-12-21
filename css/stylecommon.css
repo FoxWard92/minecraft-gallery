@@ -110,7 +110,6 @@ a{
     width: 100%;
     display: grid;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
 }
 
 .img {
@@ -175,6 +174,19 @@ a{
 
 #lbutton{
     grid-area: button1;
+}
+
+#loadbar{
+    height: 20vh;
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    background-image: url(../img/index/loadbar.gif);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
 }
 
 ::-webkit-scrollbar {

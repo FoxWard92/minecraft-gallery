@@ -89,6 +89,10 @@ a{
     .active-link{
         transform: translateY(0.5vw);
     }
+
+    #loadbar{
+        left: 45%;
+    }
     
 }
 
