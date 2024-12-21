@@ -14,34 +14,28 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const loadbar = document.getElementById('loadbar');
-const wiewpage = document.getElementsByClassName('body-page')[0]
 
 let indexpos = 0;
 
 let datalist = null;
 
 window.onload = async function() {
-    loadbar.style.opacity = 1;
     datalist = await getDataForNode("datapacks")
     if(datalist == null){
         return 0
     }
     await MoveIndex(0);
-    loadbar.style.opacity = 0;
-    wiewpage.style.opacity = 1;
+    document.getElementsByClassName('body-page')[0].style.opacity = 1;
 };
 
 window.loadElemnts = async function(data){
     const max = data.length;
-    const imagePromises = [];
     for(var i = 0; i < 6;i++){
         const itemdata = document.getElementById(`box${i+1}`) 
         if(i < max){
             const key = data[i];
             itemdata.style.opacity = 1;
             itemdata.style.backgroundImage = `url(${key.immagine})`;
-            imagePromises.push(loadImage(key.immagine));
             const descrizione = itemdata.firstElementChild
             const a = itemdata.firstElementChild.children[2]
             descrizione.children[0].innerText = key.title;
@@ -55,21 +49,7 @@ window.loadElemnts = async function(data){
             itemdata.style.opacity = 0;
         }
     }
-    try {
-        await Promise.all(imagePromises);
-    } catch (error) {
-        console.error(error);
-    }
 };
-
-window.loadImage = function(url) {
-    return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.src = url;
-        img.onload = () => resolve(url);
-        img.onerror = () => reject(new Error(`Failed to load image: ${url}`));
-    });
-}
 
 window.MoveIndex = async function (n){
     let z = indexpos + n;

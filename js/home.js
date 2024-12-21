@@ -14,19 +14,15 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const wiewpage = document.getElementsByClassName('body-page')[0]
-const loadbar = document.getElementById('loadbar');
 
 window.onload = async function() {
     loadbar.style.opacity = 1;
     await loadElemnts(await getDataForNode('news'));
-    loadbar.style.opacity = 0;
-    wiewpage.style.opacity = 1;
+    document.getElementsByClassName('body-page')[0].style.opacity = 1;
 };
 
 window.loadElemnts = async function(data){
     const max = data.length
-    const imagePromises = [];
     if(data != null){
         for(var i = 0; i < 3;i++){
             const itemdata = document.getElementById(`box${i+4}`)
@@ -36,28 +32,13 @@ window.loadElemnts = async function(data){
                 itemdata.style.opacity = 1;
                 descrizione.children[0].innerText = '[NUOVO] ' + key.title;
                 itemdata.style.backgroundImage = `url(${key.immagine})`;
-                imagePromises.push(loadImage(key.immagine));
                 descrizione.children[1].innerText = key.descrizione;
             }else{
                 itemdata.style.opacity = 0;
             }
         }
     }
-    try {
-        await Promise.all(imagePromises);
-    } catch (error) {
-        console.error(error);
-    }
 };
-
-window.loadImage = function(url) {
-    return new Promise((resolve, reject) => {
-        const img = new Image();
-        img.src = url;
-        img.onload = () => resolve(url);
-        img.onerror = () => reject(new Error(`Failed to load image: ${url}`));
-    });
-}
 
 window.getDataForNode = async function (nodeId) {
     const dbRef = ref(database, `/${nodeId}`);
