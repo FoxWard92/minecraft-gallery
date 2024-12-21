@@ -14,19 +14,25 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
+const button = document.getElementsByClassName('link');
+const iframe = document.getElementById('iframe');
 
 window.onload = async function(){
     localStorage.setItem('data',JSON.stringify(await getDataForNode('')))
 }
 
-window.LinkIsClick = function(n){
-    const button = document.getElementsByClassName('link');
+window.LinkIsClick = function(n,src){
     for (var i = button.length-1; i >= 0;i--){
         if(i == n){
             button[i].classList.add('active-link');
         }else{
             button[i].classList.remove('active-link');
         }
+    }
+    if(n < 2){
+        iframe.src = src;
+    }else{
+        window.open("https://www.youtube.com/@FoxWard92", '_blank');
     }
 }
 

@@ -198,3 +198,39 @@ a{
   scrollbar-width: thin;    
   scrollbar-color: #888 transparent;
 }
+
+.smooth-font{
+    font-family: 'minecraft-smooth-font';
+}
+
+.classic-font{
+    font-family: 'minecraft-classic-font';
+}
+
+.runes-font{
+    font-family: 'minecraft-runes-font';
+}
+
+.linear-font{
+    font-family: 'minecraft-linear-font';
+}
+
+@font-face {
+    font-family: 'minecraft-linear-font';
+    src: url('../fonts/Minecraft-Linear-Font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'minecraft-classic-font';
+    src: url('../fonts/Minecraft-Classic-Font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'minecraft-runes-font';
+    src: url('../fonts/Minecraft-Runes-Font.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'minecraft-smooth-font';
+    src: url('../fonts/Minecraft-Smooth-Font.ttf') format('truetype');
+}
