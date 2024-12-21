@@ -18,12 +18,13 @@ const wiewpage = document.getElementsByClassName('body-page')[0]
 const loadbar = document.getElementById('loadbar');
 
 window.onload = async function() {
+    loadbar.style.opacity = 1;
     await loadElemnts(await getDataForNode('news'));
+    loadbar.style.opacity = 0;
+    wiewpage.style.opacity = 1;
 };
 
 window.loadElemnts = async function(data){
-    wiewpage.style.opacity = 0;
-    loadbar.style.opacity = 1;
     const max = data.length
     const imagePromises = [];
     if(data != null){
@@ -47,8 +48,6 @@ window.loadElemnts = async function(data){
     } catch (error) {
         console.error(error);
     }
-    loadbar.style.opacity = 0;
-    wiewpage.style.opacity = 1;
 };
 
 window.loadImage = function(url) {

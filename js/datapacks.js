@@ -22,6 +22,7 @@ let indexpos = 0;
 let datalist = null;
 
 window.onload = async function() {
+    loadbar.style.opacity = 1;
     datalist = await getDataForNode("datapacks")
     if(datalist == null){
         return 0
@@ -30,6 +31,8 @@ window.onload = async function() {
 };
 
 window.loadElemnts = async function(data){
+    wiewpage.style.opacity = 0;
+    loadbar.style.opacity = 1;
     const max = data.length;
     const imagePromises = [];
     for(var i = 0; i < 6;i++){
@@ -57,6 +60,8 @@ window.loadElemnts = async function(data){
     } catch (error) {
         console.error(error);
     }
+    wiewpage.style.opacity = 1;
+    loadbar.style.opacity = 0;
 };
 
 window.loadImage = function(url) {
@@ -69,8 +74,6 @@ window.loadImage = function(url) {
 }
 
 window.MoveIndex = async function (n){
-    wiewpage.style.opacity = 0;
-    loadbar.style.opacity = 1;
     let z = indexpos + n;
     if(z >= 0 && z < datalist.length){
         indexpos = indexpos + n;
@@ -80,8 +83,6 @@ window.MoveIndex = async function (n){
         document.getElementById('lbutton').style.opacity = indexpos > 0 ? 1:0;
         await loadElemnts(datalist[indexpos])
     }
-    wiewpage.style.opacity = 1;
-    loadbar.style.opacity = 0;
 } 
 
 
