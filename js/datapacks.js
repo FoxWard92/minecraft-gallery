@@ -28,11 +28,11 @@ window.onload = async function() {
         return 0
     }
     await MoveIndex(0);
+    loadbar.style.opacity = 0;
+    wiewpage.style.opacity = 1;
 };
 
 window.loadElemnts = async function(data){
-    wiewpage.style.opacity = 0;
-    loadbar.style.opacity = 1;
     const max = data.length;
     const imagePromises = [];
     for(var i = 0; i < 6;i++){
@@ -60,8 +60,6 @@ window.loadElemnts = async function(data){
     } catch (error) {
         console.error(error);
     }
-    wiewpage.style.opacity = 1;
-    loadbar.style.opacity = 0;
 };
 
 window.loadImage = function(url) {
