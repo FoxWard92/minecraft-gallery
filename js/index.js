@@ -22,5 +22,5 @@ window.openhome = function(){
 }
 
 window.openyoutube = function(){
-    window.open("https://www.youtube.com/@FoxWard92", '_blank');
+    window.open("https://www.youtube.com/@FoxWard92", '_self');
 }
